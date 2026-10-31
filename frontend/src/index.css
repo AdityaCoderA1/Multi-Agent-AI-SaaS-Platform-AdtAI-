@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Map CSS Variables to Tailwind Utility Classes */
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-hover: var(--color-brand-hover);
+  --color-brand-bg: var(--color-brand-bg);
+  --color-brand-card: var(--color-brand-card);
+  --color-brand-text: var(--color-brand-text);
+  --color-brand-text-muted: var(--color-brand-text-muted);
+  --color-brand-border: var(--color-brand-border);
+  --color-brand-blue: var(--color-brand-blue);
+  --color-brand-sidebar-bg: var(--color-brand-sidebar-bg);
+}
+
+:root {
+  /* Light Mode (Default) */
+  --color-brand-primary: #F97316;
+  --color-brand-hover: #EA580C;
+  --color-brand-bg: #F8FAFC;
+  --color-brand-card: #FFFFFF;
+  --color-brand-text: #0F172A;
+  --color-brand-text-muted: #64748B;
+  --color-brand-border: #E5E7EB;
+  --color-brand-blue: #3B82F6;
+  --color-brand-sidebar-bg: #0F172A;
+}
+
+.dark {
+  /* Dark Mode (Slate/Navy) */
+  --color-brand-primary: #F97316; /* Keep brand orange */
+  --color-brand-hover: #EA580C;
+  --color-brand-bg: #0f172a; /* Slate 900 */
+  --color-brand-card: #1e293b; /* Slate 800 */
+  --color-brand-text: #f8fafc; /* Slate 50 */
+  --color-brand-text-muted: #94a3b8; /* Slate 400 */
+  --color-brand-border: #334155; /* Slate 700 */
+  --color-brand-blue: #60a5fa; /* Blue 400 */
+  --color-brand-sidebar-bg: #0B0E14; /* Slightly darker than main bg */
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-text);
+  /* Smooth transition for theme toggle */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

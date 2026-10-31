@@ -1,0 +1,25 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Google Cloud credentials & secrets
+serviceAccount.json
+**/serviceAccount.json
+backend/services/auth/serviceAccount.json
+
+# Temporary uploads & test files
+temp/
+**/temp/
+*.pdf
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+
+# Build files
+dist/
+build/
